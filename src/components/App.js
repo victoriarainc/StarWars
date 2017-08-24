@@ -1,20 +1,28 @@
 import React, {Component} from 'react';
 import '../styles/App.css';
 
+import Jumbotron from './Jumbotron'
+
 class App extends Component {
   // PROPS AND STATE
   // Set props and state below.
   // You should set state for vehicles (empty array), value (empty string), pilot (empty) string.
   // Enter your code below:
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      vehicles: [],
+      value: '',
+      pilot: '',
+    };
 
+    // FORM: HANDLE INPUT CHANGES
+    // handleNameChange below:
+    // See form lesson for details.
+    // Enter your code below:
 
-  // FORM: HANDLE INPUT CHANGES
-  // handleNameChange below:
-  // See form lesson for details.
-  // Enter your code below:
-
-
+    this.handleNameChange = this.handleNameChange.bind(this);
 
   //  FORM: SUBMIT METHOD
   // handleSubmit below:
@@ -23,6 +31,8 @@ class App extends Component {
   // Then, set the value of the input back to an empty string.
   // Enter your code below:
 
+    this.handleSubmit = this.handleSubmit.bind(this);
+  };
 
   // LIFECYCLE
   // Which lifecycle is best for fetching data?
@@ -46,14 +56,15 @@ class App extends Component {
     Store vehicles state in a variable.
     Map over this variable to access the values needed to render.
     */
-    })
     return (
-      <div className="App">
-        {/*
-        The App component needs the following:
-         jumbotron section, form section, vehicle cards section.
-         Your form will also need a header in which you will pass the state of the form upon submit.
-         */}
+      <div className = "App" > {
+        /*
+                The App component needs the following:
+                 jumbotron section, form section, vehicle cards section.
+                 Your form will also need a header in which you will pass the state of the form upon submit.
+                 */
+
+      }
       </div>
     );
   }
