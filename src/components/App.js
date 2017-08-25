@@ -83,7 +83,7 @@ componentDidMount () {
     Map over this variable to access the values needed to render.
     */
     return (
-      <div className = "App" >
+      <div className = "App container-fluid" >
       {/* The App component needs the following:
          jumbotron section, form section, vehicle cards section.
          Your form will also need a header in which you will pass the state of the form upon submit. */}
