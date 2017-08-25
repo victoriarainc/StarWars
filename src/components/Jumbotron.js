@@ -5,9 +5,10 @@ export default class Jumbotron extends Component {
     super(props);
   }
   render () {
-    return
+    return (
     <section class='jumbotron'>
     Jumbotron!
     </section>
+  )
   }
 }

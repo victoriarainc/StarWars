@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import '../styles/App.css';
 
 import Jumbotron from './Jumbotron'
+import Form from './Form'
 
 class App extends Component {
   // PROPS AND STATE
@@ -32,7 +33,23 @@ class App extends Component {
   // Enter your code below:
 
     this.handleSubmit = this.handleSubmit.bind(this);
+
   };
+
+  handleNameChange(event){
+      this.setState({
+        value: event.target.value
+      })
+    }
+
+  handleSubmit(event){
+    event.preventDefault()
+        this.setState({
+          pilot: this.state.value,
+          value: ''
+        })
+      }
+
 
   // LIFECYCLE
   // Which lifecycle is best for fetching data?
@@ -57,14 +74,14 @@ class App extends Component {
     Map over this variable to access the values needed to render.
     */
     return (
-      <div className = "App" > {
-        /*
-                The App component needs the following:
-                 jumbotron section, form section, vehicle cards section.
-                 Your form will also need a header in which you will pass the state of the form upon submit.
-                 */
+      <div className = "App" >
+      {/* The App component needs the following:
+         jumbotron section, form section, vehicle cards section.
+         Your form will also need a header in which you will pass the state of the form upon submit. */}
 
-      }
+        <Jumbotron />
+        <Form name={this.state.value} handleNameChange={this.handleNameChange} handleSubmit={this.handleSubmit}/>
+        <span className='displayName'> {this.state.pilot} </span>
       </div>
     );
   }
