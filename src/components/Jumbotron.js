@@ -6,7 +6,7 @@ export default class Jumbotron extends Component {
   }
   render () {
     return (
-    <section class='jumbotron'>
+    <section className='jumbotron'>
     Jumbotron!
     </section>
   )

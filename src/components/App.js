@@ -59,6 +59,14 @@ class App extends Component {
   // You will want to use this array when you set the state of 'vehicles'. You will need this data in your render.
   // Enter your code below:
 
+componentDidMount () {
+  fetch ('https://swapi.co/api/vehicles/')
+  .then(r => r.json() )
+    .then((json) => {
+      console.log("Data from componentWillMount fetch", json)
+      this.setState({vehicles: json.results})
+    })
+  }
 
   // RENDER
   // Before you can map over the data you've fetched, you will first need to store that 'state' in a variable.
