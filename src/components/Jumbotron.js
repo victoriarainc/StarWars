@@ -7,7 +7,9 @@ export default class Jumbotron extends Component {
   render () {
     return (
     <section className='jumbotron'>
-    Jumbotron!
+      <div> Star Wars! </div>
+      <br />
+      <div> Vehicles of Star Wars </div>
     </section>
   )
   }

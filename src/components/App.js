@@ -3,6 +3,7 @@ import '../styles/App.css';
 
 import Jumbotron from './Jumbotron'
 import Form from './Form'
+import VehicleList from './Vehicle'
 
 class App extends Component {
   // PROPS AND STATE
@@ -88,8 +89,8 @@ componentDidMount () {
          Your form will also need a header in which you will pass the state of the form upon submit. */}
 
         <Jumbotron />
-        <Form name={this.state.value} handleNameChange={this.handleNameChange} handleSubmit={this.handleSubmit}/>
-        <span className='displayName'> {this.state.pilot} </span>
+        <Form name={this.state.value} handleNameChange={this.handleNameChange} handleSubmit={this.handleSubmit} pilot={this.state.pilot}/>
+        <VehicleList vehicles={this.state.vehicles} />
       </div>
     );
   }
