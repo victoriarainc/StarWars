@@ -8,17 +8,43 @@ export default class VehicleList extends Component {
 
     let vehicles = this.props.vehicles.map((vehicle) => {
       return (
-          <div className="col-md-4">
-            <div className="card">
-              <div className="card-block">
-                <div className="card col-md-5">
-                  <article className="vehicle_card">
-                    {vehicle.name}
-                  </article>
-                </div>
+        <div className="col-md-4" key={vehicle.name}>
+          <div className="card">
+            <div className="card-block">
+              <p>
+                Vehicle: {vehicle.name}
+              </p>
+              <p>
+                Model: {vehicle.model}
+              </p>
+              <div className="card">
+                <ul className="list-group">
+                  <li className="list-group-item">
+                    Manufacturer: {vehicle.manufacturer}
+                  </li>
+                  <li className="list-group-item">
+                    Class: {vehicle.class}
+                  </li>
+                  <li className="list-group-item">
+                    Passengers: {vehicle.passengers}
+                  </li>
+                  <li className="list-group-item">
+                    Crew: {vehicle.crew}
+                  </li>
+                  <li className="list-group-item">
+                    Length: {vehicle.length}
+                  </li>
+                  <li className="list-group-item">
+                    Max-Speed: {vehicle.max_atmosphering_speed}
+                  </li>
+                  <li className="list-group-item">
+                    Cargo-Capactiy: {vehicle.cargo_capacity}
+                  </li>
+                  </ul>
               </div>
             </div>
           </div>
+        </div>
       )
     })
 
